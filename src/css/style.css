@@ -1,0 +1,180 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.croix-basque {
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat url(../img/croixBasque.svg) center;
+  opacity: 100%;
+  position: relative;
+  bottom: 100vh;
+  z-index: 2; }
+  @media (min-width: 100vh) {
+    .croix-basque {
+      background-size: 100vh; } }
+  @media (max-width: 100vh) {
+    .croix-basque {
+      background-size: 100vw; } }
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+  opacity: 50%;
+  background-image: url("http://bananec.fr/wp-content/uploads/2020/11/IMG_9566-scaled.jpg"); }
+
+.famille {
+  height: 15vmin;
+  width: 15vmax; }
+  .famille > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    display: none;
+    background-color: white;
+    height: 15vmin;
+    width: 15vmax; }
+    .famille > a > img {
+      height: 15vmin;
+      width: 15vmax; }
+  .famille:hover > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  @media (min-width: 100vh) {
+    .famille:nth-child(1) {
+      transform: translateY(14vh); } }
+  @media (max-width: 100vh) {
+    .famille:nth-child(1) {
+      transform: translateY(15vh); } }
+  @media (max-width: 90vh) {
+    .famille:nth-child(1) {
+      transform: translateY(19vh); } }
+  @media (max-width: 80vh) {
+    .famille:nth-child(1) {
+      transform: translateY(22vh); } }
+  @media (max-width: 70vh) {
+    .famille:nth-child(1) {
+      transform: translateY(26vh); } }
+  @media (min-width: 160vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-17vw) translateY(25vh); } }
+  @media (max-width: 160vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-20vw) translateY(25vh); } }
+  @media (max-width: 150vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-24vw) translateY(25vh); } }
+  @media (max-width: 130vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-28vw) translateY(25vh); } }
+  @media (max-width: 110vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-31vw) translateY(25vh); } }
+  @media (max-width: 100vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-31vw) translateY(25vh); } }
+  @media (max-width: 90vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-31vw) translateY(30vh); } }
+  @media (max-width: 80vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-31vw) translateY(30vh); } }
+  @media (max-width: 70vh) {
+    .famille:nth-child(2) {
+      transform: translateX(-31vw) translateY(34vh); } }
+  @media (min-width: 160vh) {
+    .famille:nth-child(3) {
+      transform: translateX(17vw) translateY(23vh); } }
+  @media (max-width: 160vh) {
+    .famille:nth-child(3) {
+      transform: translateX(20vw) translateY(23vh); } }
+  @media (max-width: 150vh) {
+    .famille:nth-child(3) {
+      transform: translateX(24vw) translateY(23vh); } }
+  @media (max-width: 130vh) {
+    .famille:nth-child(3) {
+      transform: translateX(28vw) translateY(23vh); } }
+  @media (max-width: 110vh) {
+    .famille:nth-child(3) {
+      transform: translateX(31vw) translateY(23vh); } }
+  @media (max-width: 100vh) {
+    .famille:nth-child(3) {
+      transform: translateX(31vw) translateY(23vh); } }
+  @media (max-width: 90vh) {
+    .famille:nth-child(3) {
+      transform: translateX(31vw) translateY(28vh); } }
+  @media (max-width: 80vh) {
+    .famille:nth-child(3) {
+      transform: translateX(31vw) translateY(28vh); } }
+  @media (max-width: 70vh) {
+    .famille:nth-child(3) {
+      transform: translateX(31vw) translateY(32vh); } }
+  @media (min-width: 100vh) {
+    .famille:nth-child(4) {
+      transform: translateY(28vh); } }
+  @media (max-width: 100vh) {
+    .famille:nth-child(4) {
+      transform: translateY(30vh); } }
+  @media (max-width: 80vh) {
+    .famille:nth-child(4) {
+      transform: translateY(32vh); } }
+  @media (max-width: 70vh) {
+    .famille:nth-child(4) {
+      transform: translateY(35vh); } }
+
+.colonnes {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  @media screen and (max-width: 900px) {
+    .colonnes {
+      flex-direction: column;
+      justify-content: flex-start; } }
+  .colonnes section {
+    transform: translateY(-5vh);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+  .colonnes .tableau h1 {
+    text-transform: capitalize; }
+  .colonnes .tableau table,
+  .colonnes .tableau table th,
+  .colonnes .tableau table td {
+    border: solid black 1px;
+    border-spacing: 0px; }
+    .colonnes .tableau table th,
+    .colonnes .tableau table td,
+    .colonnes .tableau table th th,
+    .colonnes .tableau table th td,
+    .colonnes .tableau table td th,
+    .colonnes .tableau table td td {
+      padding: 0 0.5em; }
+  .colonnes .tableau table .more-info:nth-child(odd) {
+    background-color: #daf2fa; }
+  .colonnes .tableau table .more-info:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  body.main {
+    overflow: hidden;
+    position: fixed; }

@@ -1,0 +1,155 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.croix-basque {
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat url(../img/croixBasque.svg) center;
+  opacity: 100%;
+  position: relative;
+  bottom: 100vh;
+  @media (min-width: 100vh) {
+    background-size: 100vh;
+  }
+  @media (max-width: 100vh) {
+    background-size: 100vw;
+  }
+  z-index: 2;
+}
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+  opacity: 50%;
+  background-image: url("http://bananec.fr/wp-content/uploads/2020/11/IMG_9566-scaled.jpg");
+}
+
+.famille {
+  $min: 15vmin;
+  $max: 15vmax;
+  height: $min;
+  width: $max;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    display: none;
+    background-color: white;
+    height: $min;
+    width: $max;
+
+    & > img {
+      height: $min;
+      width: $max;
+    }
+  }
+
+  &:hover {
+    & > a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: 100vh) {
+      transform: translateY(14vh);
+    }
+    @media (max-width: 100vh) {
+      transform: translateY(15vh);
+    }
+    @media (max-width: 90vh) {
+      transform: translateY(19vh);
+    }
+    @media (max-width: 80vh) {
+      transform: translateY(22vh);
+    }
+
+    @media (max-width: 70vh) {
+      transform: translateY(26vh);
+    }
+  }
+  &:nth-child(2) {
+    @media (min-width: 160vh) {
+      transform: translateX(-17vw) translateY(25vh);
+    }
+    @media (max-width: 160vh) {
+      transform: translateX(-20vw) translateY(25vh);
+    }
+    @media (max-width: 150vh) {
+      transform: translateX(-24vw) translateY(25vh);
+    }
+    @media (max-width: 130vh) {
+      transform: translateX(-28vw) translateY(25vh);
+    }
+    @media (max-width: 110vh) {
+      transform: translateX(-31vw) translateY(25vh);
+    }
+    @media (max-width: 100vh) {
+      transform: translateX(-31vw) translateY(25vh);
+    }
+    @media (max-width: 90vh) {
+      transform: translateX(-31vw) translateY(30vh);
+    }
+    @media (max-width: 80vh) {
+      transform: translateX(-31vw) translateY(30vh);
+    }
+    @media (max-width: 70vh) {
+      transform: translateX(-31vw) translateY(34vh);
+    }
+  }
+  &:nth-child(3) {
+    @media (min-width: 160vh) {
+      transform: translateX(17vw) translateY(23vh);
+    }
+    @media (max-width: 160vh) {
+      transform: translateX(20vw) translateY(23vh);
+    }
+    @media (max-width: 150vh) {
+      transform: translateX(24vw) translateY(23vh);
+    }
+    @media (max-width: 130vh) {
+      transform: translateX(28vw) translateY(23vh);
+    }
+    @media (max-width: 110vh) {
+      transform: translateX(31vw) translateY(23vh);
+    }
+    @media (max-width: 100vh) {
+      transform: translateX(31vw) translateY(23vh);
+    }
+    @media (max-width: 90vh) {
+      transform: translateX(31vw) translateY(28vh);
+    }
+    @media (max-width: 80vh) {
+      transform: translateX(31vw) translateY(28vh);
+    }
+    @media (max-width: 70vh) {
+      transform: translateX(31vw) translateY(32vh);
+    }
+  }
+  &:nth-child(4) {
+    @media (min-width: 100vh) {
+      transform: translateY(28vh);
+    }
+    @media (max-width: 100vh) {
+      transform: translateY(30vh);
+    }
+
+    @media (max-width: 80vh) {
+      transform: translateY(32vh);
+    }
+
+    @media (max-width: 70vh) {
+      transform: translateY(35vh);
+    }
+  }
+}

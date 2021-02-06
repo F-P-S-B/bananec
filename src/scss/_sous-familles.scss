@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.colonnes {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  section {
+    transform: translateY(-5vh);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .tableau {
+    h1 {
+      text-transform: capitalize;
+    }
+    table {
+      &,
+      th,
+      td {
+        border: solid black 1px;
+        border-spacing: 0px;
+
+        th,
+        td {
+          padding: 0 0.5em;
+        }
+      }
+      .more-info {
+        &:nth-child(odd) {
+          background-color: rgb(218, 242, 250);
+        }
+        &:hover {
+          color: white;
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
