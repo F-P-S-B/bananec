@@ -165,7 +165,43 @@
     background-color: black;
     cursor: pointer; }
 
+.btn-plus {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: black;
+  display: flex; }
+  .btn-plus::before {
+    content: "+";
+    position: relative;
+    font-size: 5rem;
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2rem;
+    border: 1px black solid;
+    border-radius: 50%; }
+  .btn-plus:hover {
+    transition: ease-in-out 0.3s;
+    opacity: 0.5;
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 100px; }
+    .btn-plus:hover::after {
+      content: attr(data-lien);
+      transition: ease-in-out 5s;
+      position: relative;
+      top: 15px;
+      display: block;
+      font-size: 5rem; }
+    .btn-plus:hover::before {
+      border: 0; }
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 

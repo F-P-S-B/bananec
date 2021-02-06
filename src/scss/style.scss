@@ -1,7 +1,10 @@
 @charset "utf-8";
 @import "familles";
 @import "./sous-familles.scss";
+@import "./boutonPlus";
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }

@@ -1,0 +1,44 @@
+$size: 1;
+
+.btn-plus {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: black;
+  display: flex;
+
+  &::before {
+    content: "+";
+    position: relative;
+    font-size: $size * 5rem;
+    padding-top: $size * 1rem;
+    padding-left: $size * 2.5rem;
+    padding-right: $size * 2.5rem;
+    padding-bottom: $size * 2rem;
+    border: 1px black solid;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    transition: ease-in-out 0.3s;
+    opacity: 0.5;
+
+    background-color: black;
+    color: white;
+    padding: $size * 1rem $size * 2rem;
+    border-radius: $size * 100px;
+    &::after {
+      content: attr(data-lien);
+      transition: ease-in-out 5s;
+      position: relative;
+      top: $size * 15px;
+      display: block;
+      font-size: $size * 5rem;
+    }
+    &::before {
+      border: 0;
+    }
+  }
+}
