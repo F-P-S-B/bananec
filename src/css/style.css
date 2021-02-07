@@ -3,131 +3,47 @@
   flex-direction: column;
   align-items: center; }
 
-.croix-basque {
-  height: 100vh;
-  width: 100vw;
-  background: no-repeat url(../img/croixBasque.svg) center;
-  opacity: 100%;
-  position: relative;
-  bottom: 100vh;
-  z-index: 2; }
-  @media (min-width: 100vh) {
-    .croix-basque {
-      background-size: 100vh; } }
-  @media (max-width: 100vh) {
-    .croix-basque {
-      background-size: 100vw; } }
-
 .background {
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100vw;
-  opacity: 50%;
-  background-image: url("http://bananec.fr/wp-content/uploads/2020/11/IMG_9566-scaled.jpg"); }
+  background-image: url(../img/accueil_don.jpg); }
 
-.famille {
-  height: 15vmin;
-  width: 15vmax; }
-  .famille > a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    text-decoration: none;
-    display: none;
-    background-color: white;
-    height: 15vmin;
-    width: 15vmax; }
-    .famille > a > img {
-      height: 15vmin;
-      width: 15vmax; }
-  .famille:hover > a {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  @media (min-width: 100vh) {
-    .famille:nth-child(1) {
-      transform: translateY(14vh); } }
-  @media (max-width: 100vh) {
-    .famille:nth-child(1) {
-      transform: translateY(15vh); } }
-  @media (max-width: 90vh) {
-    .famille:nth-child(1) {
-      transform: translateY(19vh); } }
-  @media (max-width: 80vh) {
-    .famille:nth-child(1) {
-      transform: translateY(22vh); } }
-  @media (max-width: 70vh) {
-    .famille:nth-child(1) {
-      transform: translateY(26vh); } }
-  @media (min-width: 160vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-17vw) translateY(25vh); } }
-  @media (max-width: 160vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-20vw) translateY(25vh); } }
-  @media (max-width: 150vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-24vw) translateY(25vh); } }
-  @media (max-width: 130vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-28vw) translateY(25vh); } }
-  @media (max-width: 110vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-31vw) translateY(25vh); } }
-  @media (max-width: 100vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-31vw) translateY(25vh); } }
-  @media (max-width: 90vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-31vw) translateY(30vh); } }
-  @media (max-width: 80vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-31vw) translateY(30vh); } }
-  @media (max-width: 70vh) {
-    .famille:nth-child(2) {
-      transform: translateX(-31vw) translateY(34vh); } }
-  @media (min-width: 160vh) {
-    .famille:nth-child(3) {
-      transform: translateX(17vw) translateY(23vh); } }
-  @media (max-width: 160vh) {
-    .famille:nth-child(3) {
-      transform: translateX(20vw) translateY(23vh); } }
-  @media (max-width: 150vh) {
-    .famille:nth-child(3) {
-      transform: translateX(24vw) translateY(23vh); } }
-  @media (max-width: 130vh) {
-    .famille:nth-child(3) {
-      transform: translateX(28vw) translateY(23vh); } }
-  @media (max-width: 110vh) {
-    .famille:nth-child(3) {
-      transform: translateX(31vw) translateY(23vh); } }
-  @media (max-width: 100vh) {
-    .famille:nth-child(3) {
-      transform: translateX(31vw) translateY(23vh); } }
-  @media (max-width: 90vh) {
-    .famille:nth-child(3) {
-      transform: translateX(31vw) translateY(28vh); } }
-  @media (max-width: 80vh) {
-    .famille:nth-child(3) {
-      transform: translateX(31vw) translateY(28vh); } }
-  @media (max-width: 70vh) {
-    .famille:nth-child(3) {
-      transform: translateX(31vw) translateY(32vh); } }
-  @media (min-width: 100vh) {
-    .famille:nth-child(4) {
-      transform: translateY(28vh); } }
-  @media (max-width: 100vh) {
-    .famille:nth-child(4) {
-      transform: translateY(30vh); } }
-  @media (max-width: 80vh) {
-    .famille:nth-child(4) {
-      transform: translateY(32vh); } }
-  @media (max-width: 70vh) {
-    .famille:nth-child(4) {
-      transform: translateY(35vh); } }
+a.btn-plus {
+  position: absolute; }
+  a.btn-plus:nth-child(2) {
+    color: blanchedalmond;
+    top: 56vh;
+    left: 40vw; }
+  a.btn-plus:nth-child(3) {
+    top: 30vh;
+    left: 20vw; }
+  a.btn-plus:nth-child(4) {
+    top: 45vh;
+    left: 85vw; }
+  a.btn-plus:nth-child(5) {
+    top: 70vh;
+    left: 85vw; }
+  @media screen and (max-width: 800px) {
+    a.btn-plus:nth-child(2) {
+      top: 54vh; }
+    a.btn-plus:nth-child(3) {
+      top: 40vh; }
+    a.btn-plus:nth-child(5) {
+      top: 60vh; } }
+  @media screen and (max-width: 600px) {
+    a.btn-plus {
+      transform: scale(0.5); }
+      a.btn-plus:nth-child(2) {
+        top: 50vh; }
+      a.btn-plus:nth-child(4) {
+        top: 40vh;
+        left: 80vw; }
+      a.btn-plus:nth-child(5) {
+        top: 55vh;
+        left: 80vw; } }
 
 .colonnes {
   width: 100vw;
@@ -166,9 +82,6 @@
     cursor: pointer; }
 
 .btn-plus {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
   transform: translate(-50%, -50%);
   text-decoration: none;
   color: black;
@@ -176,11 +89,11 @@
   .btn-plus::before {
     content: "+";
     position: relative;
-    font-size: 5rem;
-    padding-top: 1rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-bottom: 2rem;
+    font-size: 1.25rem;
+    padding-top: 0.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-bottom: 0.5rem;
     border: 1px black solid;
     border-radius: 50%; }
   .btn-plus:hover {
@@ -188,15 +101,15 @@
     opacity: 0.5;
     background-color: black;
     color: white;
-    padding: 1rem 2rem;
-    border-radius: 100px; }
+    padding: 0.25rem 0.5rem;
+    border-radius: 25px; }
     .btn-plus:hover::after {
       content: attr(data-lien);
       transition: ease-in-out 5s;
       position: relative;
-      top: 15px;
+      top: 3.75px;
       display: block;
-      font-size: 5rem; }
+      font-size: 1.25rem; }
     .btn-plus:hover::before {
       border: 0; }
 
