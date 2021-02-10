@@ -1,0 +1,107 @@
+#modal {
+  z-index: 1;
+  * {
+    z-index: inherit;
+  }
+  display: none;
+  &.active {
+    display: flex;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.8;
+  #md-bg {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50vw;
+    height: 90vh;
+    background-color: white;
+    border-radius: 5vh;
+    opacity: 1;
+    header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem 0;
+      border-bottom: black solid 1px;
+      box-shadow: 1vh 0 1vh black;
+    }
+    .body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 0 1rem;
+      padding: 0 5rem;
+      overflow: auto;
+      scrollbar-width: thin; /* "auto" or "thin" */
+      scrollbar-color: grey blanchedalmond;
+      & > .complementaire {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 55%;
+          margin: 1rem 1rem 0 0;
+        }
+        > div {
+          display: inherit;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: orange;
+
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: blue;
+
+        border-radius: 10px;
+      }
+    }
+    footer {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      border-top: black solid 1px;
+      box-shadow: 1vh 0 1vh black;
+      button {
+        margin: 0 0 0 2em;
+        border-radius: 5px;
+        height: 5vh;
+        width: 5vw;
+      }
+      #submit {
+        width: 7vw;
+        background-color: green;
+        color: white;
+      }
+    }
+  }
+}

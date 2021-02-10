@@ -113,6 +113,93 @@ a.btn-plus {
     .btn-plus:hover::before {
       border: 0; }
 
+#modal {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.8; }
+  #modal * {
+    z-index: inherit; }
+  #modal.active {
+    display: flex; }
+  #modal #md-bg {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #modal main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50vw;
+    height: 90vh;
+    background-color: white;
+    border-radius: 5vh;
+    opacity: 1; }
+    #modal main header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem 0;
+      border-bottom: black solid 1px;
+      box-shadow: 1vh 0 1vh black; }
+    #modal main .body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 0 1rem;
+      padding: 0 5rem;
+      overflow: auto;
+      scrollbar-width: thin;
+      /* "auto" or "thin" */
+      scrollbar-color: grey blanchedalmond; }
+      #modal main .body > .complementaire {
+        display: flex;
+        justify-content: space-between; }
+        #modal main .body > .complementaire img {
+          width: 55%;
+          margin: 1rem 1rem 0 0; }
+        #modal main .body > .complementaire > div {
+          display: inherit;
+          flex-direction: column;
+          justify-content: space-around; }
+      #modal main .body::-webkit-scrollbar {
+        width: 15px; }
+      #modal main .body::-webkit-scrollbar-track {
+        background: orange;
+        border-radius: 10px; }
+      #modal main .body::-webkit-scrollbar-thumb {
+        background: blue;
+        border-radius: 10px; }
+    #modal main footer {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      border-top: black solid 1px;
+      box-shadow: 1vh 0 1vh black; }
+      #modal main footer button {
+        margin: 0 0 0 2em;
+        border-radius: 5px;
+        height: 5vh;
+        width: 5vw; }
+      #modal main footer #submit {
+        width: 7vw;
+        background-color: green;
+        color: white; }
+
 * {
   box-sizing: border-box;
   margin: 0;
