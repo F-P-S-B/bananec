@@ -45,41 +45,86 @@ a.btn-plus {
         top: 55vh;
         left: 80vw; } }
 
+body {
+  width: 100vw; }
+
+.bg {
+  background-image: var(--bg-image);
+  width: 50vw;
+  height: 100vh;
+  margin-right: 15vw;
+  background-size: cover; }
+  @media screen and (max-width: 900px) {
+    .bg {
+      width: 100vw;
+      height: 50vh;
+      margin: 0;
+      margin-bottom: 100px; } }
+  @media screen and (max-width: 600px) {
+    .bg {
+      height: 40vh; } }
+  @media screen and (max-width: 450px) {
+    .bg {
+      height: 30vh; } }
+
 .colonnes {
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center; }
+  justify-content: flex-end;
+  align-items: space-around; }
+  @media screen and (min-width: 1000px) {
+    .colonnes.noScale .tableau {
+      transform: none; } }
+  @media screen and (max-width: 1000px) {
+    .colonnes.noScale .tableau {
+      transform: translatey(-5vh); } }
   @media screen and (max-width: 900px) {
     .colonnes {
       flex-direction: column;
-      justify-content: flex-start; } }
+      justify-content: flex-end;
+      align-items: center; } }
   .colonnes section {
-    transform: translateY(-5vh);
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .colonnes section:is(:not(:nth-child(1))) {
+      margin-right: 10rem; }
+    @media screen and (min-width: 900px) {
+      .colonnes section {
+        height: 100vh; } }
+  .colonnes .tableau {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }
-  .colonnes .tableau h1 {
-    text-transform: capitalize; }
-  .colonnes .tableau table,
-  .colonnes .tableau table th,
-  .colonnes .tableau table td {
-    border: solid black 1px;
-    border-spacing: 0px; }
+    @media screen and (min-width: 1000px) {
+      .colonnes .tableau {
+        transform: translatey(-5vh) scale(1.2); } }
+    @media screen and (max-width: 1000px) {
+      .colonnes .tableau {
+        transform: translatey(-5vh); } }
+    @media screen and (max-width: 900px) {
+      .colonnes .tableau {
+        margin-bottom: 100px; } }
+    .colonnes .tableau h1 {
+      text-transform: capitalize; }
+    .colonnes .tableau table,
     .colonnes .tableau table th,
-    .colonnes .tableau table td,
-    .colonnes .tableau table th th,
-    .colonnes .tableau table th td,
-    .colonnes .tableau table td th,
-    .colonnes .tableau table td td {
-      padding: 0 0.5em; }
-  .colonnes .tableau table .more-info:nth-child(odd) {
-    background-color: #daf2fa; }
-  .colonnes .tableau table .more-info:hover {
-    color: white;
-    background-color: black;
-    cursor: pointer; }
+    .colonnes .tableau table td {
+      border: solid black 1px;
+      border-spacing: 0px; }
+      .colonnes .tableau table th,
+      .colonnes .tableau table td,
+      .colonnes .tableau table th th,
+      .colonnes .tableau table th td,
+      .colonnes .tableau table td th,
+      .colonnes .tableau table td td {
+        padding: 0 0.5em; }
+    .colonnes .tableau table .more-info:nth-child(odd) {
+      background-color: #daf2fa; }
+    .colonnes .tableau table .more-info:hover {
+      background-color: #aff4f6;
+      cursor: pointer; }
 
 .btn-plus {
   transform: translate(-50%, -50%);
@@ -87,18 +132,14 @@ a.btn-plus {
   color: black;
   display: flex; }
   .btn-plus::before {
-    content: "+";
+    content: url(../img/croixBasque.svg);
     position: relative;
-    font-size: 1.25rem;
-    padding-top: 0.25rem;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.125rem;
     border: 1px black solid;
     border-radius: 50%; }
   .btn-plus:hover {
     transition: ease-in-out 0.3s;
-    opacity: 0.5;
+    opacity: 0.8;
     background-color: black;
     color: white;
     padding: 0.25rem 0.5rem;
@@ -114,6 +155,7 @@ a.btn-plus {
       border: 0; }
 
 #modal {
+  background-color: transparent;
   z-index: 1;
   display: none;
   position: absolute;
@@ -122,14 +164,14 @@ a.btn-plus {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100vw;
-  background-color: black;
-  opacity: 0.8; }
+  width: 100vw; }
   #modal * {
     z-index: inherit; }
   #modal.active {
     display: flex; }
   #modal #md-bg {
+    background-color: black;
+    opacity: 0.5;
     z-index: 0;
     width: 100vw;
     height: 100vh;
@@ -141,32 +183,45 @@ a.btn-plus {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 50vw;
+    width: 60vw;
     height: 90vh;
     background-color: white;
     border-radius: 5vh;
     opacity: 1; }
+    @media screen and (max-width: 600px) {
+      #modal main {
+        width: 80vw;
+        height: 80vh;
+        transform: translateY(-5vh); } }
     #modal main header {
+      border-radius: 5vh 5vh 0 0;
       display: flex;
       justify-content: center;
       width: 100%;
       padding: 1rem 0;
       border-bottom: black solid 1px;
-      box-shadow: 1vh 0 1vh black; }
+      box-shadow: 1vh 0vh 1vh black; }
     #modal main .body {
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 0 1rem;
-      padding: 0 5rem;
+      padding: 0 2rem;
       overflow: auto;
       scrollbar-width: thin;
       /* "auto" or "thin" */
       scrollbar-color: grey blanchedalmond; }
+      @media screen and (max-width: 600px) {
+        #modal main .body {
+          padding: 0; } }
       #modal main .body > .complementaire {
         display: flex;
         justify-content: space-between; }
+        @media screen and (max-width: 900px) {
+          #modal main .body > .complementaire {
+            flex-direction: column;
+            align-items: center; } }
         #modal main .body > .complementaire img {
           width: 55%;
           margin: 1rem 1rem 0 0; }
@@ -174,6 +229,14 @@ a.btn-plus {
           display: inherit;
           flex-direction: column;
           justify-content: space-around; }
+          @media screen and (max-width: 900px) {
+            #modal main .body > .complementaire > div tr {
+              display: flex;
+              flex-direction: column; } }
+          #modal main .body > .complementaire > div td {
+            width: 50%; }
+            #modal main .body > .complementaire > div td input {
+              width: 100%; }
       #modal main .body::-webkit-scrollbar {
         width: 15px; }
       #modal main .body::-webkit-scrollbar-track {
@@ -183,8 +246,9 @@ a.btn-plus {
         background: blue;
         border-radius: 10px; }
     #modal main footer {
+      border-radius: 0 0 5vh 5vh;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       width: 100%;
       margin-top: 2rem;
       padding: 1rem 0;
@@ -192,11 +256,15 @@ a.btn-plus {
       box-shadow: 1vh 0 1vh black; }
       #modal main footer button {
         margin: 0 0 0 2em;
-        border-radius: 5px;
-        height: 5vh;
-        width: 5vw; }
+        border-radius: 0.5rem;
+        height: 150%;
+        width: 20%;
+        cursor: pointer;
+        transform: translateY(-1vh); }
+        @media screen and (max-width: 600px) {
+          #modal main footer button {
+            transform: translateY(-1vh); } }
       #modal main footer #submit {
-        width: 7vw;
         background-color: green;
         color: white; }
 

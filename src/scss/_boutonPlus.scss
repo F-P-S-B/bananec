@@ -10,20 +10,21 @@ $size: 0.25;
   display: flex;
 
   &::before {
-    content: "+";
+    content: url(../img/croixBasque.svg);
     position: relative;
-    font-size: $size * 5rem;
-    padding-top: $size * 1rem;
-    padding-left: $size * 2.5rem;
-    padding-right: $size * 2.5rem;
-    padding-bottom: $size * 2rem;
+    // width: 10px;
+    // height: 10px;
+    padding-top: $size * 0.5rem;
+    // padding-left: $size * 1rem;
+    // padding-right: $size * 1rem;
+    // padding-bottom: $size * 0.5rem;
     border: 1px black solid;
     border-radius: 50%;
   }
 
   &:hover {
     transition: ease-in-out 0.3s;
-    opacity: 0.5;
+    opacity: 0.8;
 
     background-color: black;
     color: white;
