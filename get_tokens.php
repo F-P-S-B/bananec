@@ -33,15 +33,5 @@
             return $jsonResp;
         }
     }
-    $resp = getTokens();
-    
-    foreach($resp as $key=>$value){
-        echo $key.' : '.$value;
-        echo '<br/><br/>';
-    }
-    
-    $myfile = fopen("testfile.txt", "r") ;
-    echo "Token : ".fread($myfile,filesize("testfile.txt"));
-    fclose($myfile);
-
+    $resp = getTokens();  
 ?>
