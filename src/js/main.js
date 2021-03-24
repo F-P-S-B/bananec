@@ -41,6 +41,7 @@ for (let i = 0; i < lignes.length; i++) {
     modal.classList.add("active");
     cellules = ligne.getElementsByTagName("td");
     modal.getElementsByTagName("header")[0].innerHTML = cellules[0].innerText;
+    document.getElementById("imageModal").src = cellules[0].dataset.img;
     document.getElementById("prix").innerText =
       cellules[2].innerText + " / " + cellules[3].innerText;
     prix = parseInt(cellules[2].innerText.replace("€", ""));
