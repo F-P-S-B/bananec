@@ -1,2 +1,3 @@
 # Bananec
-Site : `src/html/index.html`
+
+Site : `.index.html`

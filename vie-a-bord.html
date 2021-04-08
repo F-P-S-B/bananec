@@ -146,43 +146,10 @@
         </div>
       </section>
     </div>
-    <div id="modal">
-      <div id="md-bg"></div>
-      <main>
-        <header>Titre</header>
-        <div class="body">
-          <p id="description"></p>
-          <div class="complementaire">
-            <img src="./src/img/accueil_don.jpg" alt="" id="imageModal" />
-            <div class="column">
-              <h2>Prix : <span id="prix"></span></h2>
-              <table>
-                <tr>
-                  <td>
-                    <label for="input-qtt">Quantité: </label>
-                  </td>
-                  <td>
-                    <input type="text" name="input-qtt" id="input-qtt" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label for="input-prix">Prix: </label>
-                  </td>
-                  <td>
-                    <input type="text" name="input-prix" id="input-prix" />
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-        <footer>
-          <button id="submit">Faire un don</button>
-          <button id="cancel">Annuler</button>
-        </footer>
-      </main>
-    </div>
+    <div id="modal"></div>
+    <script src="src/js/modal.js"></script>
+    <script src="src/js/generationTableau/constantes.js"></script>
+    <script src="src/js/generationTableau/vieABord.js"></script>
     <script src="./src/js/main.js"></script>
   </body>
 </html>
