@@ -44,7 +44,7 @@ a.btn-plus {
     }
   }
   @media screen and (max-width: 600px) {
-    transform: scale(0.5);
+    transform: scale(0.5) translateY(20vh);
 
     &:nth-child(2) {
       top: 50vh;

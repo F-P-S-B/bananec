@@ -15,26 +15,34 @@
         --bg-image: url("../img/navigation/PC_TEL.jpg");
       }
     }
+    @media screen and (min-width: 1000px) {
+      body {
+        overflow: hidden;
+      }
+    }
   </style>
   <body>
     <div class="colonnes noScale">
       <section>
         <div class="bg"></div>
       </section>
+      <header class="header-ssfam">
+        <h1>Navigation et sécurité</h1>
+        <h2>Cliquez sur l'équipement de votre choix pour faire un don</h2>
+        <a href="./index.html">Retour</a>
+      </header>
       <section>
-        <div class="tableau" id="outils de navigation">
-    
-        </div>
-        <div class="tableau" id="cartes">
-          
-        </div>
-
-        
+        <div class="tableau" id="outils de navigation"></div>
+        <div class="tableau" id="cartes"></div>
+        <div
+          class="tableau"
+          id="feux"
+          style="transform: translateY(-100%)"
+        ></div>
       </section>
       <section>
         <div class="tableau" id="sécurité"></div>
-        <div class="tableau" id=feux>
-          <div class="tableau" id=livres>   </div>
+        <div class="tableau" id="livres"></div>
       </section>
     </div>
     <div id="modal"></div>

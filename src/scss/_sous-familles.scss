@@ -1,6 +1,24 @@
 @charset "utf-8";
 body {
   width: 100vw;
+  background-color: lighten(gray, 30%);
+}
+.header-ssfam {
+  position: absolute;
+  right: var(--header-position);
+  height: 10vh;
+  text-align: center;
+  h2 {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 1000px) {
+    position: relative;
+    right: 0;
+    transform: none;
+    width: auto;
+
+    bottom: 10vw;
+  }
 }
 .bg {
   // position: absolute;
@@ -9,14 +27,14 @@ body {
   background-image: var(--bg-image);
   width: 50vw;
   height: 100vh;
-  margin-right: 15vw;
+  margin-right: 5vw;
   background-size: cover;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     width: 100vw;
     height: 50vh;
     margin: 0;
-    margin-bottom: 100px;
+    margin-bottom: 15vh;
   }
   @media screen and (max-width: 600px) {
     height: 40vh;
@@ -25,6 +43,7 @@ body {
     height: 30vh;
   }
 }
+
 .colonnes {
   width: 100vw;
   display: flex;
@@ -40,59 +59,86 @@ body {
     }
   }
   align-items: space-around;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
   }
+
   section {
+    &:not(:first-child) {
+      transform: translateY(10vh);
+    }
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     &:is(:not(:nth-child(1))) {
-      margin-right: 10rem;
+      margin-right: 5rem;
     }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
       height: 100vh;
     }
   }
   .tableau {
     @media screen and (min-width: 1000px) {
-      transform: translatey(-5vh) scale(1.2);
+      transform: translateY(-5vh) scale(1.2);
     }
     @media screen and (max-width: 1000px) {
-      transform: translatey(-5vh);
+      position: relative;
+      left: 6vh;
     }
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       margin-bottom: 100px;
     }
     h1 {
       text-transform: capitalize;
     }
     table {
-      &,
+      border: solid black 1px;
+      border-spacing: 0px;
+
       th,
       td {
-        border: solid black 1px;
-        border-spacing: 0px;
+        padding: 0 0.5em;
+      }
+      th {
+        font-size: 0.8rem;
+      }
 
-        th,
-        td {
-          padding: 0 0.5em;
+      tr {
+        border-radius: 10px/5px;
+        color: white;
+        background-color: lighten(#2c3845, 10%);
+        &:nth-child(odd) {
+          background-color: lighten(#2c3845, 0%);
+        }
+        td:nth-child(1) {
+          width: 11em;
+          overflow: hidden;
+          display: inline-block;
+        }
+        > td:not(:first-child) {
+          text-align: center;
+        }
+        > td:last-child {
+          text-align: end;
         }
       }
       .more-info {
-        &:nth-child(odd) {
-          background-color: rgb(218, 242, 250);
-        }
+        cursor: pointer;
+        color: white;
         &:hover {
-          background-color: #aff4f6;
-          cursor: pointer;
+          background-color: lighten(black, 10%);
+        }
+        td:nth-child(1) {
+          width: 10em;
+          overflow: hidden;
+          display: inline-block;
         }
       }
     }

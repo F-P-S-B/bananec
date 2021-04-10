@@ -698,9 +698,9 @@ var createTable = (id, liste) => {
 
   let tempStr = `<tr>
                 <th>Objet</th>
-                <th>Quantité requise</th>
-                <th>Prix</th>
                 <th>Unité</th>
+                <th>Qté</th>
+                <th>Prix</th>
               </tr>`;
   for (obj of liste) {
     tempStr += `<tr class="more-info">
@@ -708,12 +708,12 @@ var createTable = (id, liste) => {
                   data-description="${obj.description}"
                   data-img="${obj.photo}"
                   data-don="${obj.lienDon}"
-                >
+                  >
                   ${obj.nom}
-                </td>
+                  </td>
+                  <td> ${obj.unite}</td>
                 <td>${obj.qte}</td>
                 <td>${parseInt(obj.prix)}€</td>
-                <td> ${obj.unite}</td>
               </tr>`;
   }
   tabElt.innerHTML = tempStr;

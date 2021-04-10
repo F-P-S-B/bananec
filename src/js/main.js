@@ -1,3 +1,15 @@
+// Set header position
+const setHeaderPosition = () => {
+  const size =
+    (window.innerWidth - document.querySelector("section").offsetWidth) / 2;
+  console.log(size);
+  document
+    .querySelector(":root")
+    .style.setProperty("--header-position", `${size}px`);
+};
+window.addEventListener("load", setHeaderPosition);
+window.addEventListener("resize", setHeaderPosition);
+
 // Get tables cell
 const lignes = document.getElementsByClassName("more-info");
 
