@@ -65,7 +65,7 @@ const headerContent = `
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-976"
             >
               <a
-                href="https://www.helloasso.com/associations/bananec-lagunak/formulaires/1/widget"
+                href="http://bananec.fr/don"
                 >Faites un don</a
               >
             </li>
@@ -75,8 +75,9 @@ const headerContent = `
     </header>
     <p
         style="
-          transform: translateY(9vh);
-          background: inherit;
+          position: relative;
+          top:9vh;
+          background-color: lighten(gray, 30%);
           font-size: 1.5rem;
           text-align: center;
         "
@@ -92,7 +93,6 @@ window.addEventListener("load", () => {
     : (document.getElementById("header").innerHTML = "");
 });
 window.addEventListener("resize", () => {
-  console.log("test");
   window.innerWidth > 1050
     ? (document.getElementById("header").innerHTML = headerContent)
     : (document.getElementById("header").innerHTML = "");

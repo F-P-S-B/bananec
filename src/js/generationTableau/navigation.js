@@ -6,13 +6,11 @@ const tabFeuxList = tableau.filter((elt) => elt.ssFamille === "Feux");
 
 createTable("feux", tabFeuxList);
 
-const tabLivresList = tableau.filter((elt) => elt.ssFamille === "Livres");
+const tabCartesList = tableau.filter(
+  (elt) => elt.ssFamille === "Cartes" || elt.ssFamille === "Livres"
+);
 
-createTable("livres", tabLivresList);
-
-const tabCartesList = tableau.filter((elt) => elt.ssFamille === "Cartes");
-
-createTable("cartes", tabCartesList);
+createTable("cartes et livres", tabCartesList);
 
 const tabOutilsList = tableau.filter(
   (elt) => elt.ssFamille === "Outils de navigation"

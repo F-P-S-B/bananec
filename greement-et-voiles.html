@@ -10,9 +10,17 @@
     :root {
       --bg-image: url("../img/greement/PC.jpg");
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       :root {
         --bg-image: url("../img/greement/TEL.jpg");
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      body {
+        overflow: hidden;
+      }
+      .header-ssfam {
+        transform: translateX(10vw);
       }
     }
   </style>
@@ -30,7 +38,7 @@
         <div class="tableau" id="cordages"></div>
       </section>
       <section>
-        <div class="tableau" id="taquets"></div>
+        <div class="tableau" id="taquets et poulies"></div>
 
         <div class="tableau" id="manilles et mousquetons"></div>
       </section>

@@ -2,7 +2,6 @@
 const setHeaderPosition = () => {
   const size =
     (window.innerWidth - document.querySelector("section").offsetWidth) / 2;
-  console.log(size);
   document
     .querySelector(":root")
     .style.setProperty("--header-position", `${size}px`);
@@ -40,7 +39,7 @@ for (let i = 0; i < lignes.length; i++) {
     modal.getElementsByTagName("header")[0].innerHTML = cellules[0].innerText;
     document.getElementById("imageModal").src = cellules[0].dataset.img;
     document.getElementById("prix").innerText =
-      cellules[2].innerText + " / " + cellules[3].innerText;
+      cellules[3].innerText + " / " + cellules[1].innerText;
     document.getElementById("description").innerText =
       cellules[0].dataset.description;
     document.getElementById("submit").addEventListener("click", () => {

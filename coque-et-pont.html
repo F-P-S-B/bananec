@@ -10,15 +10,26 @@
     :root {
       --bg-image: url("../img/coque-et-pont/PC.jpg");
     }
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       :root {
         --bg-image: url("../img/coque-et-pont/TEL.jpg");
       }
     }
+    @media screen and (min-width: 1000px) {
+      body {
+        overflow: hidden;
+      }
+      .translate {
+        transform: translateX(-20vw);
+      }
+      .translate .header-ssfam {
+        transform: translateX(30vw);
+      }
+    }
   </style>
-  <body>
+  <body class="translate">
     <div class="colonnes">
-      <section>
+      <section class="">
         <div class="bg"></div>
       </section>
       <header class="header-ssfam">
@@ -26,7 +37,7 @@
         <h2>Cliquez sur l'équipement de votre choix pour faire un don</h2>
         <a href="./index.html">Retour</a>
       </header>
-      <section>
+      <section class="">
         <div class="sous-famille">
           <div class="tableau" id="peinture"></div>
         </div>
